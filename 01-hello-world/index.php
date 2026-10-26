@@ -12,7 +12,7 @@ $nomes = "Jose Augusto";
 </head> 
 <body> 
 <h1><?php echo "$texto"; ?></h1> 
-<p>Meu nome é <?php "$nomes" ?>.</p> 
-<p>Estou aprendendo PHP no curso <?php "$curso" ?>.</p> 
+<p>Meu nome é <?php echo "$nomes" ?>.</p> 
+<p>Estou aprendendo PHP no curso <?php echo "$curso" ?>.</p> 
 </body> 
 </html> 
