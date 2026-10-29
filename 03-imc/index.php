@@ -1,6 +1,16 @@
 <?php 
-$peso   = 70.0;   
-$altura = 1.75; 
+
+if ($_SERVER["REQUEST_METHOD"] == "POST"){
+    
+
+    $altura = $_POST['alturaNome'];
+    $textoSeguroAltura = htmlspecialchars($altura);
+    
+     $peso = $_POST['pesoNome'];
+    $textoSeguroPeso = htmlspecialchars($peso);
+      
+   if ($peso !== "" && $altura !== ""){ 
+    $calculo = "$peso / ($altura * $altura)" ;
 $imc = $peso / ($altura * $altura);
 $imcFormatado = number_format($imc, 1, ",", ".");   
 if ($imc < 18.5) { 
@@ -16,8 +26,7 @@ $classe = "Obesidade grau II";
 }elseif ($imc >= 40 ){
 $classe = " Obesidade grau III (mórbida)"; 
 }
-if ($_SERVER["REQUEST_METHOD"] == "POST"){
-    
+}
 }
 ?>
 <!DOCTYPE html> 
@@ -28,13 +37,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 </head> 
 <body> 
   <h1>Calculadora de IMC</h1> 
-  <p>Peso: <?= $peso ?> kg</p> 
-   <form method="POST" action="">
-        <label for="Atura_input">Altura: </label>
-        <input type="text" id="Atura_input" name="Altura: " required>
+  <form method="POST" action="">
+        <label for="peso_input">Peso: : </label>
+        <input type="text" id="peso_input" name="pesoNome" required>
         <button type="submit">Enviar</button>
     </form>
-  <p>IMC: <strong><?= $imcFormatado ?></strong></p> 
-  <p>Classificação: <strong><?= $classe ?></strong></p> 
+   <form method="POST" action="">
+        <label for="altura_input">Altura: </label>
+        <input type="text" id="altura_input" name="alturaNome" required>
+        <button type="submit">Enviar</button>
+    </form>
+  <p> Calculo: <?= $calculo ?? '' ?></strong>
+  <p>IMC: <strong><?= $imcFormatado ?? '' ?></strong></p>
+  <p>Classificação: <strong><?= $classe ?? '' ?></strong></p> 
 </body> 
 </html>
