@@ -4,7 +4,7 @@ Atividades práticas de Programação Web I (Técnico em Informática).
   
 **Aluno:** José Augusto Souza Fortunato
   
-## Projetos - 01-hello-world: primeira página em PHP - 02-data-hora: data e hora do servidor <br>- 03-imc: calculadora de IMC <br>- 04-produtos: lista de produtos com array associativo 
+## Projetos - 01-hello-world: primeira página em PHP <br> - 02-data-hora: data e hora do servidor <br>- 03-imc: calculadora de IMC <br>- 04-produtos: lista de produtos com array associativo 
   
 ## Como executar 
 1. Instalar o Laragon e iniciar os serviços. 
@@ -17,5 +17,5 @@ Atividades práticas de Programação Web I (Técnico em Informática).
   - Lógica if else em php.
   - Uso de array em php.
 ## Soluções alternativas que testei - (anote o que pesquisou e comparou nos desafios)
-- Uso de try catch - falho 
-- Logica de proteção do código um pouco diferente - sucesso
+- Uso de try catch - falho.
+- Logica de proteção do código um pouco diferente - sucesso.
